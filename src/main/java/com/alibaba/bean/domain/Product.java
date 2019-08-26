@@ -1,5 +1,6 @@
 package com.alibaba.bean.domain;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.ToString;
 
@@ -12,6 +13,7 @@ import lombok.ToString;
 
 @Data
 @ToString
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class Product {
     private Long id;
 
