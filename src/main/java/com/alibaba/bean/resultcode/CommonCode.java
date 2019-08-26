@@ -1,6 +1,5 @@
-package com.alibaba.bean.result;
+package com.alibaba.bean.resultcode;
 
-import com.alibaba.bean.response.ResultCode;
 import lombok.ToString;
 
 /**
@@ -16,6 +15,14 @@ public enum CommonCode implements ResultCode {
      * 参数异常
      */
     INVALID_PARAM(false,10001,"非法参数"),
+    /**
+     * 商品识别码已存在
+     */
+    IdCODE_EXIST(false,20001,"商品识别码已存在"),
+
+    /**
+     * 操作成功
+     */
     SUCCESS(true,10000,"操作成功");
 
     boolean success;

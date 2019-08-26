@@ -1,6 +1,6 @@
 package com.alibaba.exception;
 
-import com.alibaba.bean.response.ResultCode;
+import com.alibaba.bean.resultcode.ResultCode;
 
 /**
  * @Author : laoyog

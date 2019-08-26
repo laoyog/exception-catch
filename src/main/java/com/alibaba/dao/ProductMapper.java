@@ -2,6 +2,7 @@ package com.alibaba.dao;
 
 import com.alibaba.bean.domain.Product;
 import org.apache.ibatis.annotations.*;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Author : laoyog
@@ -10,6 +11,7 @@ import org.apache.ibatis.annotations.*;
  */
 
 @Mapper
+@Repository
 public interface ProductMapper {
 
     @Insert(value = "insert into product(id_code,name,type) values (#{idCode},#{name},#{type})")

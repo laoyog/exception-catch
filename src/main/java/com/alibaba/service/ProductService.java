@@ -1,9 +1,8 @@
 package com.alibaba.service;
 
 import com.alibaba.bean.domain.Product;
-import com.alibaba.bean.result.CustomCode;
-import com.alibaba.bean.result.CommonCode;
-import com.alibaba.bean.result.ProductResult;
+import com.alibaba.bean.result.ResponseResult;
+import com.alibaba.bean.resultcode.CommonCode;
 import com.alibaba.dao.ProductMapper;
 import com.alibaba.exception.ExceptionCast;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,18 +26,18 @@ public class ProductService {
      * @param product
      * @return
      */
-    public ProductResult add(Product product) {
+    public ResponseResult add(Product product) {
         //先根据识别号查重
         Long id = productMapper.findByIdCode(product.getIdCode());
         //说明该识别号已存在,抛出异常
         if(id != null){
-            ExceptionCast.cast(CustomCode.IdCODE_EXIST);
+            ExceptionCast.cast(CommonCode.IdCODE_EXIST);
         }
 
         int count= productMapper.add(product);
         System.out.println(count);
 
-        return new ProductResult(CommonCode.SUCCESS,product);
+        return new ResponseResult(CommonCode.SUCCESS,product);
 
     }
 
@@ -47,13 +46,13 @@ public class ProductService {
      * @param product
      * @return
      */
-    public ProductResult edit(Product product) {
+    public ResponseResult edit(Product product) {
         Product one = productMapper.findById(product.getId());
         if(one != null){
 
             productMapper.edit(product);
         }
 
-        return new ProductResult(CommonCode.SUCCESS,product);
+        return new ResponseResult(CommonCode.SUCCESS,product);
     }
 }

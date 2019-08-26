@@ -1,4 +1,4 @@
-package com.alibaba.bean.response;
+package com.alibaba.bean.resultcode;
 
 /**
  * @Author : laoyog

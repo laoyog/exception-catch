@@ -2,7 +2,7 @@ package com.alibaba.controller;
 
 import com.alibaba.api.ProductControllerApi;
 import com.alibaba.bean.domain.Product;
-import com.alibaba.bean.result.ProductResult;
+import com.alibaba.bean.result.ResponseResult;
 import com.alibaba.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,13 +22,13 @@ public class ProductController implements ProductControllerApi {
 
     @PostMapping(value = "/add")
     @Override
-    public ProductResult add(@RequestBody Product product) {
+    public ResponseResult add(@RequestBody Product product) {
         return productService.add(product);
     }
 
     @PostMapping("/edit")
     @Override
-    public ProductResult edit(@RequestBody Product product) {
+    public ResponseResult edit(@RequestBody Product product) {
         return productService.edit(product);
     }
 }

@@ -1,7 +1,7 @@
 package com.alibaba.api;
 
 import com.alibaba.bean.domain.Product;
-import com.alibaba.bean.result.ProductResult;
+import com.alibaba.bean.result.ResponseResult;
 
 /**
  * @Author : laoyog
@@ -15,13 +15,13 @@ public interface ProductControllerApi {
      * @param product
      * @return
      */
-    ProductResult add(Product product);
+    ResponseResult add(Product product);
 
     /**
      * 修改商品
      * @param product
      * @return
      */
-    ProductResult edit(Product product);
+    ResponseResult edit(Product product);
 
 }

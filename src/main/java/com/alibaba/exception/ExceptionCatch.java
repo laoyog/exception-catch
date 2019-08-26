@@ -1,8 +1,8 @@
 package com.alibaba.exception;
 
-import com.alibaba.bean.response.ResponseResult;
-import com.alibaba.bean.response.ResultCode;
-import com.alibaba.bean.result.CommonCode;
+import com.alibaba.bean.result.ResponseResult;
+import com.alibaba.bean.resultcode.ResultCode;
+import com.alibaba.bean.resultcode.CommonCode;
 import com.google.common.collect.ImmutableMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -47,6 +47,12 @@
             <version>19.0</version>
         </dependency>
 
+        <!--主要用于：某个字段为null则不返回-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.7.9.1</version>
+        </dependency>
 
     </dependencies>
 
